@@ -1,7 +1,7 @@
 {
   "name": "chart",
   "version": "1.0.0",
-  "description": "",
+  "description": "ECharts图表封装，作为 report-designer 的库",
   "main": "build/main.js",
   "scripts": {
     "build": "set NODE_ENV=development && node server.js",
