@@ -11,7 +11,8 @@ var config = {
     output: {
         path: path.resolve("build"),
         filename: "[name].js",
-        chunkFilename: "chunk.[name].js"
+        chunkFilename: "chunk.[name].js",
+		libraryTarget:"umd"
     },
     plugins: [
         new webpack.DefinePlugin({
