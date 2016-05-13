@@ -21,11 +21,11 @@ export default class Chart {
         "line": LINEParser,
         "pie": PIEParser
     };
-    $onResize = ()=>this.echart.resize();
+    resize = ()=>this.echart.resize();
 
     constructor(element) {
         this.echart = echarts.init(element);
-        window.addEventListener("resize", this.$onResize);
+        window.addEventListener("resize", this.resize);
     }
 
     get type() {
@@ -84,7 +84,7 @@ export default class Chart {
         if (this.$renderTimeoutId != undefined)
             clearTimeout(this.$renderTimeoutId);
         if (this.echart) {
-            window.removeEventListener("resize", this.$onResize);
+            window.removeEventListener("resize", this.resize);
             this.echart.dispose();
             this.echart = null;
         }

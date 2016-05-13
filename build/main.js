@@ -119,12 +119,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	            "pie": _PIEParser2.default
 	        };
 
-	        this.$onResize = function () {
+	        this.resize = function () {
 	            return _this.echart.resize();
 	        };
 
 	        this.echart = _echarts2.default.init(element);
-	        window.addEventListener("resize", this.$onResize);
+	        window.addEventListener("resize", this.resize);
 	    }
 
 	    _createClass(Chart, [{
@@ -173,7 +173,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        value: function dispose() {
 	            if (this.$renderTimeoutId != undefined) clearTimeout(this.$renderTimeoutId);
 	            if (this.echart) {
-	                window.removeEventListener("resize", this.$onResize);
+	                window.removeEventListener("resize", this.resize);
 	                this.echart.dispose();
 	                this.echart = null;
 	            }
