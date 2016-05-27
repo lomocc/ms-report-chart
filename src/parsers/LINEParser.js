@@ -1,6 +1,7 @@
 /**
  * Created by vincent on 2016/5/9.
  */
+import translate from './translate'
 export default (sources, pureData)=> {
     var indexMap = {};
     var xAxis = [
@@ -19,7 +20,7 @@ export default (sources, pureData)=> {
             } else {
                 if (indexMap[k] === undefined) {
                     indexMap[k] = series.length;
-                    var name = k;//translate.get(k);
+                    var name = translate(k);//translate.get(k);
                     series.push({name, type: 'line', smooth: true, data: []});
                     legend.data.push(name);
                 }

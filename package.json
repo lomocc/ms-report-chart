@@ -1,6 +1,6 @@
 {
   "name": "ms-report-chart",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "ECharts图表封装，作为 report-designer 的库",
   "main": "build/main.js",
   "scripts": {
